@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@capacitor/android':
+        specifier: 7.4.3
+        version: 7.4.3(@capacitor/core@7.4.3)
       '@capacitor/app':
         specifier: 7.0.2
         version: 7.0.2(@capacitor/core@7.4.3)
@@ -17,9 +20,6 @@ importers:
       '@capacitor/haptics':
         specifier: 7.0.2
         version: 7.0.2(@capacitor/core@7.4.3)
-      '@capacitor/ios':
-        specifier: 7.4.3
-        version: 7.4.3(@capacitor/core@7.4.3)
       '@capacitor/keyboard':
         specifier: 7.0.2
         version: 7.0.2(@capacitor/core@7.4.3)
@@ -87,6 +87,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.0.1
         version: 4.7.0(vite@5.2.14(@types/node@24.3.0)(lightningcss@1.30.1)(terser@5.43.1))
+      cross-env-shell:
+        specifier: ^7.0.3
+        version: 7.0.3
       cypress:
         specifier: ^13.5.0
         version: 13.17.0
@@ -640,6 +643,11 @@ packages:
     resolution: {integrity: sha512-ruv7Ae4J5dUYULmeXw1gmb7rYRz57OWCPM57pHojnLq/3Z1CK2lNSLTCVjxVk1F/TZHwOZZrOWi0ur95BbLxNQ==}
     engines: {node: '>=6.9.0'}
 
+  '@capacitor/android@7.4.3':
+    resolution: {integrity: sha512-VpjvnOcmYGPLgvXRhe3CGLs62Cg7sxOyp77NddCr+Y06qqgnoaj6OGeBVTc2DZlqZ6bSmh15JvFu82pkvmdgfQ==}
+    peerDependencies:
+      '@capacitor/core': ^7.4.0
+
   '@capacitor/app@7.0.2':
     resolution: {integrity: sha512-kRWBF6Wc6OQxhL+N6rsegyfJY37Lj9/VJhtrmgmH+y+rdxQLQwUOpMyxXStym7cF+QzGeVpItyVxyUT9fE5ByQ==}
     peerDependencies:
@@ -657,11 +665,6 @@ packages:
     resolution: {integrity: sha512-vqfeEM6s2zMgLjpITCTUIy7P/hadq/Gr5E/RClFgMJPB41Y5FsqOKD+j85/uwh8N2cf/aWaPeXUmjnTzJbEB2g==}
     peerDependencies:
       '@capacitor/core': '>=7.0.0'
-
-  '@capacitor/ios@7.4.3':
-    resolution: {integrity: sha512-VNm7cHODgh3KK/4ZC2rXU9gBlvHii/mYFLI+XMXwq24nhB679QxHhz+pUuI7PatYoM2q4MAL0NR/dRgehKCaSA==}
-    peerDependencies:
-      '@capacitor/core': ^7.4.0
 
   '@capacitor/keyboard@7.0.2':
     resolution: {integrity: sha512-9We5BY1mu+QWOReDukr+6HxA4Bh0mKBU0txFtwXJdjBohttMYWJzB+dQf4oHrX8odiU2Cm/BfDdAU2wV06Cyig==}
@@ -1793,6 +1796,10 @@ packages:
 
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
+
+  cross-env-shell@7.0.3:
+    resolution: {integrity: sha512-ZEtnHInQRRzuAbmMpUqu/mk1jaZun14WdcmnpzZZ6Bpi1BLTPkbKioQ6+wkFssf+m/DpdttDpsCX6g8zU9W40A==}
+    hasBin: true
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -4399,6 +4406,10 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
+  '@capacitor/android@7.4.3(@capacitor/core@7.4.3)':
+    dependencies:
+      '@capacitor/core': 7.4.3
+
   '@capacitor/app@7.0.2(@capacitor/core@7.4.3)':
     dependencies:
       '@capacitor/core': 7.4.3
@@ -4430,10 +4441,6 @@ snapshots:
       tslib: 2.8.1
 
   '@capacitor/haptics@7.0.2(@capacitor/core@7.4.3)':
-    dependencies:
-      '@capacitor/core': 7.4.3
-
-  '@capacitor/ios@7.4.3(@capacitor/core@7.4.3)':
     dependencies:
       '@capacitor/core': 7.4.3
 
@@ -5585,6 +5592,8 @@ snapshots:
   core-js@3.45.1: {}
 
   core-util-is@1.0.2: {}
+
+  cross-env-shell@7.0.3: {}
 
   cross-spawn@7.0.6:
     dependencies:
