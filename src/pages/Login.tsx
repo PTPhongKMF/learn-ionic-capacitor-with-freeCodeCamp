@@ -1,13 +1,16 @@
-import { IonButton, IonCard, IonCardContent, IonContent, IonHeader, IonInput, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonCard, IonCardContent, IonContent, IonHeader, IonInput, IonPage, IonTitle, IonToolbar, useIonRouter } from '@ionic/react';
 import React, { FormEvent, useState } from 'react';
 import IntroSwipe from '../components/IntroSwipe';
 
 function Login() {
   const [showIntro, setShowIntro] = useState(true);
 
+  const router = useIonRouter();
+
   function handleLogin(e: FormEvent) {
     e.preventDefault();
     console.log("Logging in!");
+    router.push("/tabpage", "forward");
   }
 
   return (
